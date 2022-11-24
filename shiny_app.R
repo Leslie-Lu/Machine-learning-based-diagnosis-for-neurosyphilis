@@ -89,21 +89,21 @@ ui <- fluidPage(
           "Serum TPPA titer:",
           choices = c('Negative'= 0,
                       'Positive'= 1),
-          selected = 0
+          selected = 1
         ),
         selectInput(
           "s_igg1", 
           "Serum TP-IgG:",
           choices = c('Negative'= 0,
                       'Positive'= 1),
-          selected = 0
+          selected = 1
         ),
         selectInput(
           "s_trust1", 
           "Serum TRUST:",
           choices = c('Negative'= 0,
                       'Positive'= 1),
-          selected = 0
+          selected = 1
         ),
         numericInput(
           inputId = "c_pro1",
