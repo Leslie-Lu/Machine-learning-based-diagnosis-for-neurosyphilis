@@ -168,13 +168,13 @@ ui <- fluidPage(
 #   )
 # ),
 
-tabPanel('The Simplified Clinical Diagnostic Models for Neurosyphilis in Scenario 1',
+tabPanel('Scenario 1',
          sidebarLayout(
            sidebarPanel('Overall',
                         br(),
                         helpText('Welcome to the Shiny App for Neurosyphilis Diagnosis.'),
-                        helpText('You can use this app to accurately predict the risk of developing a neurosyphilis outcome in confirmed syphilis patients without HIV infection by six globally authoritative clinical guidelines with laboratory data.'),
-                        helpText('This page contains the version of machine learning models in Scenario 1.'),
+                        helpText('You can use this to accurately predict the risk of developing a neurosyphilis outcome in syphilis patients without HIV infection.'),
+                        helpText('This page contains the version of models in Scenario 1.'),
                         width = 2
            ),
            mainPanel(width = 10,
@@ -252,13 +252,13 @@ tabPanel('The Simplified Clinical Diagnostic Models for Neurosyphilis in Scenari
          )
 ),
 
-tabPanel('The Simplified Clinical Diagnostic Models for Neurosyphilis in Scenario 2',
+tabPanel('Scenario 2',
          sidebarLayout(
            sidebarPanel('Overall',
                         br(),
                         helpText('Welcome to the Shiny App for Neurosyphilis Diagnosis.'),
-                        helpText('You can use this app to accurately predict the risk of developing a neurosyphilis outcome in confirmed syphilis patients without HIV infection by six globally authoritative clinical guidelines with laboratory data.'),
-                        helpText('This page contains the version of machine learning models in Scenario 2.'),
+                        helpText('You can use this to accurately predict the risk of developing a neurosyphilis outcome in syphilis patients without HIV infection.'),
+                        helpText('This page contains the version of models in Scenario 2.'),
                         width = 2
            ),
            mainPanel(width = 10,
@@ -310,7 +310,7 @@ tabPanel('The Simplified Clinical Diagnostic Models for Neurosyphilis in Scenari
                          # ),
                          selectInput(
                            "c_vdrl3", 
-                           "CSF VDRL/RPR (any one of the two)",
+                           "CSF VDRL/RPR",
                            choices = c('Negative'= 0,
                                        'Positive'= 1),
                            selected = 0
@@ -437,8 +437,8 @@ server <- function(input, output){
     # dsLabel2= dsLabel2[order(r2)]
     n_meds2= length(dsLabel2)
     
-    pp2= data.frame(input$c_wbc2, input$c_pro2, input$syptom2)
-    names(pp2)[1:3]= c('CSF WBC', 'CSF protein', 'Neurological symptoms')
+    pp2= data.frame(input$syptom2, input$c_pro2, input$c_wbc2)
+    names(pp2)[1:3]= c('Neurological symptoms', 'CSF protein', 'CSF WBC')
     
     ppData_tmp2= pp2 %>% apply(.,2,as.numeric) %>% as.data.frame() %>% t() %>%  as.matrix()
     dMtrxpp_tmp2 = xgb.DMatrix(ppData_tmp2)
