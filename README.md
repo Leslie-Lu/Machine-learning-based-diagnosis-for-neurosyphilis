@@ -4,7 +4,8 @@ This is a Shiny app for this article (citation below), to enable users to apply 
 
 ![shiny app screenshot](./data/img/shiny_app_screenshot.png)
 
-Zou H, Lu Z, Weng W, et al. Diagnosis of neurosyphilis in HIV-negative patients with syphilis: development, validation, and clinical utility of a suite of machine learning models. eClinicalMedicine 2023; 62.
+Zou, H., Lu, Z., Weng, W., Yang, L., Yang, L., Leng, X., Wang, J., Lin, Y.-F., Wu, J., Fu, L., Zhang, X., Li, Y., Wang, L., Wu, X., Zhou, X., Tian, T., Huang, L., Marra, C. M., Yang, B., . . . Ke, W. (2023). Diagnosis of neurosyphilis in HIV-negative patients with syphilis: development, validation, and clinical utility of a suite of machine learning models. eClinicalMedicine, 62. https://doi.org/10.1016/j.eclinm.2023.102080 
+
 
 
 ## Contact
